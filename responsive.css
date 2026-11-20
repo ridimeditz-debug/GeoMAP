@@ -1,0 +1,21 @@
+/* Responsive layouts: tablet and mobile */
+@media (max-width: 1000px) {
+  .atlas { grid-template-columns: 1fr; } .atlas-side { max-height: none; order: 2; } .atlas-map { height: 62vh; min-height: 380px; position: static; order: 1; }
+  .quiz-body { grid-template-columns: 1fr; } .quiz-body .map-wrap { height: 52vh; min-height: 340px; }
+  .hero-art { display: none; }
+}
+@media (max-width: 820px) {
+  .burger { display: block; }
+  #nav { display: none; position: absolute; left: 0; right: 0; top: 100%; flex-direction: column; background: var(--surface); padding: .5rem 12px 1rem; border-bottom: 1px solid var(--border); box-shadow: var(--shadow); margin: 0; }
+  .nav-open #nav { display: flex; } #nav a { padding: .7rem .8rem; }
+  .topbar { gap: .6rem; }
+}
+@media (max-width: 560px) {
+  body { font-size: 15px; } .card { padding: .9rem; border-radius: 12px; }
+  .recent li { grid-template-columns: 1fr auto; } .recent li .muted { grid-column: 1; }
+  .result-hero { justify-content: center; text-align: center; } .result-hero .row { justify-content: center; }
+  .qactions { flex-wrap: wrap; } .qactions .btn { flex: 1; }
+  .quiz-head { grid-template-columns: 1fr; } .qh-right { justify-content: space-between; }
+  .seg button { padding: .5rem .7rem; } .grid.stats { grid-template-columns: repeat(2, 1fr); } .stat b { font-size: 1.4rem; }
+  .map-label { font-size: 10px; } .quiz-body .map-wrap { height: 46vh; }
+}

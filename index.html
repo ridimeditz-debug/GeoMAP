@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GeoMap · CBSE Class 12 Geography Map Practice</title>
+  <meta name="description" content="Interactive map practice for CBSE Class 12 Geography: locate, identify and revise every prescribed map-work item.">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <script>
+    // Apply the saved or preferred theme before first paint (avoids a light flash in dark mode).
+    try {
+      var s = JSON.parse(localStorage.getItem('geomap.v1') || '{}'), t = s.settings && s.settings.theme;
+      document.documentElement.dataset.theme = t || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    } catch (e) {}
+  </script>
+  <link rel="stylesheet" href="vendor/leaflet.css">
+  <link rel="stylesheet" href="css/themes.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <a class="skip" href="#view">Skip to content</a>
+  <header class="topbar">
+    <a class="brand" href="#/" aria-label="GeoMap home"><img src="assets/icons/favicon.svg" alt="" width="28" height="28"><span>GeoMap</span></a>
+    <button id="burger" class="icon-btn burger" aria-label="Menu">☰</button>
+    <nav id="nav" aria-label="Main">
+      <a href="#/" data-route="">Dashboard</a>
+      <a href="#/chapters" data-route="chapters">Chapters</a>
+      <a href="#/atlas/world" data-route="atlas/world">World Atlas</a>
+      <a href="#/atlas/india" data-route="atlas/india">India Atlas</a>
+      <a href="#/practice" data-route="practice">Practice</a>
+      <a href="#/progress" data-route="progress">Progress</a>
+      <a href="#/syllabus" data-route="syllabus">Syllabus</a>
+    </nav>
+    <button id="theme" class="icon-btn" aria-label="Toggle theme">☾</button>
+  </header>
+  <main id="view" class="view" tabindex="-1"><div class="loading">Loading GeoMap…</div></main>
+  <footer class="foot">GeoMap · CBSE Class 12 Geography map-work practice · Progress is saved only in this browser.</footer>
+  <noscript><p style="padding:2rem">GeoMap needs JavaScript to run.</p></noscript>
+  <script src="vendor/leaflet.js"></script>
+  <script src="data/bundle.js"></script>
+  <script src="js/app.bundle.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+/* Colour tokens. Parchment, earthy greens, muted blues. */
+:root, :root[data-theme="light"] {
+  --bg: #f3ecd9; --surface: #fffaf0; --surface-2: #f8f1de; --ink: #2b2a24; --muted: #6c6556;
+  --border: #dccfb0; --green: #3f6b4a; --green-d: #2f5238; --green-l: #e1ecd9; --blue: #3d6f8e; --blue-l: #dde9ef;
+  --brown: #8a6a43; --amber: #d99a00; --red: #b3392d; --ok: #2e7d32; --pink: #d6336c;
+  --shadow: 0 1px 2px rgba(60,45,20,.08), 0 4px 14px rgba(60,45,20,.07);
+  --map-sea: #cfe0e6; --map-land: #efe6cc; --map-neigh: #e2d8bc; --map-line: #b3a47c; --map-line-strong: #8a7a55;
+  color-scheme: light;
+}
+:root[data-theme="dark"] {
+  --bg: #171b1f; --surface: #22282d; --surface-2: #2a3138; --ink: #ece6d4; --muted: #a39c8a;
+  --border: #38414a; --green: #86bd91; --green-d: #a5d4ae; --green-l: #26372b; --blue: #7fb0cc; --blue-l: #1f3340;
+  --brown: #c9a577; --amber: #e8b53a; --red: #e07a6e; --ok: #6cc070; --pink: #f06595;
+  --shadow: 0 1px 2px rgba(0,0,0,.4), 0 4px 14px rgba(0,0,0,.3);
+  --map-sea: #17313f; --map-land: #38402f; --map-neigh: #2d332a; --map-line: #596049; --map-line-strong: #7a8262;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme]) { color-scheme: dark; } }
